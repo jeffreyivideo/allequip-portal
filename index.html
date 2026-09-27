@@ -16,18 +16,68 @@
       padding-bottom: 50px;
     }
 
-    /* 頂部深藍色標題列 (與總樞紐一致) */
+    /* 頂部深藍色標題列 */
     .header-bar {
       background-color: #0b3d60;
       color: white;
-      padding: 25px 20px;
+      padding: 20px 20px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       border-bottom: 4px solid #1976D2;
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+    
+    .header-title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px; /* Logo 與標題的間距 */
+    }
+
+    /* =========================================
+       🌟 信實純 CSS 版 Logo 設計 (轉換自 Tailwind)
+       ========================================= */
+    .sincere-css-logo {
+      background-color: #ffffff;
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border: 3px solid rgba(255,255,255,0.2);
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+    
+    .sincere-css-logo-inner {
+      width: 85%;
+      height: 60%;
+      border: 2.5px solid #000;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+    
+    .sincere-css-logo-text {
+      color: #000;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 11px;
+      letter-spacing: -0.05em;
+      font-family: Arial, sans-serif;
+    }
+    
     .header-bar h2 {
       margin: 0;
       font-weight: 900;
@@ -115,8 +165,18 @@
 
   <!-- 頂部標題列 -->
   <div class="header-bar">
-    <h2><i class="bi bi-qr-code-scan me-2"></i>設備檢點平台</h2>
-    <div style="font-size: 14px; color: #b0bec5; margin-top: 5px;">點擊清單即可開啟設備專屬檢點表</div>
+    <div class="header-title-container">
+      
+      <!-- 🌟 信實 Logo 區塊 (純 CSS 轉換版) -->
+      <div class="sincere-css-logo">
+        <div class="sincere-css-logo-inner">
+          <span class="sincere-css-logo-text">sincere</span>
+        </div>
+      </div>
+      
+      <h2>設備檢點平台</h2>
+    </div>
+    <div style="font-size: 14px; color: #b0bec5; margin-top: 8px;">點擊清單即可開啟設備專屬檢點表</div>
   </div>
 
   <div class="container mt-3">
